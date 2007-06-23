@@ -1,0 +1,8 @@
+Bad assumptions in registry2.0:
+
+* sqlite3_step returns SQLITE_ERROR only on constraint violations, and never
+  returns SQLITE_BUSY or SQLITE_MISUSE. In actuality there are more
+  possibilities, but they generally come up only when multiple sqlite3*
+  instances are accessing the db.
+
+* 
